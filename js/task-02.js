@@ -10,9 +10,12 @@ const ingredients = [
 const list = document.querySelector("#ingredients");
 
 
-ingredients.map((element, index, array) => {
+const markup = ingredients.map((element, index, array) => {
   const el1 = document.createElement('li');
   el1.textContent = element;
-  list.append(el1);
+  return el1;
 })
 
+
+// 
+list.append(...markup)
